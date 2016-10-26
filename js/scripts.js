@@ -1,5 +1,6 @@
 // ------ Business Logic -------
-var regexp = /^[a-zA-Z]+$/;
+var regexp = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
+
 var vowels = ["a", "e", "i", "o", "u"]
 
 function emptyCheck (userInput) {
@@ -16,18 +17,23 @@ function emptyCheck (userInput) {
 
 // --------User Int Logic -----------
 $(document).ready(function() {
+
   $("form").submit(function(event) {
     event.preventDefault();
 
     var userInput = $("#text-input").val();
-    console.log(userInput);
+    var words = userInput.split(" ")
+    console.log(words);
+
     emptyCheck(userInput);
 
-    vowels.forEach(function(vowel) {
-      if (userInput.charAt(0) === vowel) {
-        alert(userInput + "ay");
+    words.forEach(function(word) {
+      vowels.forEach(function(vowel) {
+        if (word.charAt(0) === vowel) {
+          console.log(word + "ay");
 
-      }
+        }
+      });
 
     });
 
