@@ -22,7 +22,8 @@ $(document).ready(function() {
 
     vowels.forEach(function(vowel) {
       if (userInput === vowel) {
-        alert("This is a vowel!")
+        alert(userInput + "ay");
+
       }
 
     });
