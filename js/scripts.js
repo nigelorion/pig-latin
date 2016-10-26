@@ -9,7 +9,10 @@ function emptyCheck (userInput) {
     return false;
   }
 };
-
+//
+// for (var i = 0; i < 1; i += 1;) {
+//   i
+// }
 
 // --------User Int Logic -----------
 $(document).ready(function() {
@@ -21,7 +24,7 @@ $(document).ready(function() {
     emptyCheck(userInput);
 
     vowels.forEach(function(vowel) {
-      if (userInput === vowel) {
+      if (userInput.charAt(0) === vowel) {
         alert(userInput + "ay");
 
       }
