@@ -1,40 +1,36 @@
-// var userInput = $("#text-input").val();
-//
-// function errorCheck(userInput) {
-//   if (!userInput) {
-//     alert("Please enter text!");
-//     return false;
-//   } else {
-//     return true;
-//   }
-// };
-//
-// $(document).ready(function() {
-//   $("form").submit(function(event) {
-//     event.preventDefault();
-//
-//
-//     errorCheck(userInput);
-//
-//
-//   });
-// });
-function errorCheck (userInput) {
 
-  if (!userInput) {
+var regexp = /^[a-zA-Z]+$/;
+function emptyCheck (userInput) {
+
+  if (!userInput || !userInput.match(regexp)) {
     alert("Enter text!");
     return false;
   }
 };
 
+// function lettersCheck (userInput) {
+//   if (!userInput.match(regexp)) {
+//     alert("No number or symbols please!")
+//     return false;
+//   }
+// };
 
-$(document).ready(function(){
-  $("form").submit(function(event){
+
+// function vowelChecker (userInput) {
+//
+//   if ()
+//
+// };
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
     event.preventDefault();
 
     var userInput = $("#text-input").val();
     console.log(userInput);
-    errorCheck(userInput);
+
+
+    emptyCheck(userInput);
 
   });
 });
